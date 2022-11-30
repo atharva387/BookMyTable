@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/drawable/cat_background1.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/drawable/cat_background3.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/drawable/et_style.xml" value="0.2235" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/drawable/ic_back_arrow.xml" value="0.2385" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_hob_info.xml" value="0.152" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_homepage.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_hotelinfo.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_main.xml" value="0.21458333333333332" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_menu.xml" value="0.152" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/activity_signup.xml" value="0.16" />
+        <entry key="..\:/DemoMainDesign/FinalBMT/app/src/main/res/layout/searchbarback.xml" value="0.22327898550724637" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
