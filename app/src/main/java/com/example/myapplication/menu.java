@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -14,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static com.example.myapplication.R.id.recycler2;
+
 
 import com.google.zxing.integration.android.IntentResult;
 import com.journeyapps.barcodescanner.ScanIntentResult;
@@ -28,7 +30,7 @@ public class menu extends AppCompatActivity {
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewCategoryList;
-
+    int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -36,17 +38,33 @@ public class menu extends AppCompatActivity {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        String result = getIntent().getExtras().get("result").toString();
-        TextView textView1 = (TextView) findViewById(R.id.text1);
-        TextView textView2 = (TextView) findViewById(R.id.text2);
-        TextView textView3 = (TextView) findViewById(R.id.text3);
-        TextView textView4 = (TextView) findViewById(R.id.text4);
-        TextView textView5 = (TextView) findViewById(R.id.text5);
-        TextView textView6 = (TextView) findViewById(R.id.text6);
-        EditText editText1 = (EditText) findViewById(R.id.edittext1);
-        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView1);
-        RecyclerView recyclerView2 = (RecyclerView) findViewById(recycler2);
-        textView.setText("Table No" + result);
+        Button b1 = (Button) findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b1.setVisibility(View.INVISIBLE);
+            }
+        });
+        Button b4 = (Button) findViewById(R.id.button4);
+        Button b3 = (Button) findViewById(R.id.button3);
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count=count+1;
+                b3.setText(Integer.toString(count));
+            }
+        });
+        Button b2 = (Button)findViewById(R.id.button2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count!=0){count=count-1;}
+                b3.setText(Integer.toString(count));
+            }
+        });
+
+
+
 
     }
 

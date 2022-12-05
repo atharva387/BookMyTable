@@ -6,241 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Button"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:gravity="center"
+        android:text="This is menu Fragment"
+        tools:layout_editor_absoluteX="-119dp"
+        tools:layout_editor_absoluteY="-29dp" />
 
-        <LinearLayout
-            android:id="@+id/linear1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-
-                    android:text="This is table"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/text2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/text1" />
-
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:text="Proceed"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-
-                    android:textStyle="bold"
-                    app:iconTint="#FF9800"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler2" />
-
-                <EditText
-                    android:id="@+id/edittext1"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/edittext_background"
-                    android:drawableStart="@android:drawable/ic_menu_search"
-                    android:drawablePadding="30dp"
-                    android:ems="10"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:hint="find your choice"
-                    android:inputType="textPersonName"
-                    android:paddingStart="20dp"
-                    android:textSize="20sp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.51"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text2" />
-
-                <TextView
-                    android:id="@+id/text1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-
-                    android:text="Hello !"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="155dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Eveyone "
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text1" />
-
-                <TextView
-                    android:id="@+id/text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:text="Note :"
-                    android:textAlignment="center"
-                    android:textColor="#EC1010"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edittext1" />
-
-                <TextView
-                    android:id="@+id/text4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:text="Order Cancellation Charges 2%"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text3" />
-
-
-                <TextView
-                    android:id="@+id/text5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:text="Categories"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/l1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text4" />
-
-                <LinearLayout
-                    android:id="@+id/l1"
-                    android:layout_width="411dp"
-                    android:layout_height="83dp"
-
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text5">
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="86dp"
-                        android:layout_height="75dp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/cat_background1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.049"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text5"
-                        app:srcCompat="@drawable/cat_1" />
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="86dp"
-                        android:layout_height="77dp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/cat_background1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.049"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text5"
-                        app:srcCompat="@drawable/cat_2" />
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="86dp"
-                        android:layout_height="87dp"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="3dp"
-                        android:background="@drawable/cat_background1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.049"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text5"
-                        app:srcCompat="@drawable/cat_3" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/text6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/almendra_bold_italic"
-                    android:text="Popular"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/l1" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text6" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

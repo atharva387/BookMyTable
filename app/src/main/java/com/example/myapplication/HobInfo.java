@@ -1,43 +1,64 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
-public class HobInfo extends AppCompatActivity {
-private Button button ;
-ImageButton imageButton;
+public class HobInfo extends AppCompatActivity
+{
+    TabLayout tabLayout;
+    TabItem tabItem1,tabItem2,tabItem3,tabItem4;
+    ViewPager viewPager;
+    PageAdapter pageAdapter;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-
+    protected void onCreate(Bundle savedInstanceState)
+    {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hob_info);
-        imageButton =findViewById(R.id.second_back_arrow);
+        tabLayout=(TabLayout)findViewById(R.id.tablayout1);
+        tabItem1=(TabItem)findViewById(R.id.tab1);
+        tabItem2=(TabItem)findViewById(R.id.tab2);
+        tabItem3=(TabItem)findViewById(R.id.tab3);
 
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+
+
+        viewPager=(ViewPager)findViewById(R.id.vpager);
+
+        pageAdapter=new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pageAdapter);
+
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(HobInfo.this,homepage.class);
-                startActivity(intent);
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+
+                if(tab.getPosition()==0 || tab.getPosition()==1 || tab.getPosition()==2)
+                    pageAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 
-
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        //listen for scroll or page change
     }
 }

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bhagirathi_sr_no_46_dp_rd_vakil_nagar_karve_nagar_pune_maharashtra_411052">Bhagirathi, Sr No 46, DP Rd, Vakil Nagar, Karve Nagar, Pune, Maharashtra 411052</string>
+    <string name="menu">menu</string>
+    <string name="rules">Rules</string>
+    <string name="cafe_tour">Cafe Tour</string>
+    <string name="cafe_house_of_bamboo">Cafe : House Of Bamboo</string>
+    <string name="when_a_group_of_old_friends_want_to_meet_to_celebrate_life_in_pune_this_is_the_place">When a group of old friends want to meet to celebrate life, in Pune this is the place!</string>
+    <string name="address">Address :</string>
+
+    <!-- Strings used for fragments for navigation -->
+
+
 </resources>
