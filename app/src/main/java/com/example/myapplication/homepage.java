@@ -83,14 +83,14 @@ public class homepage extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(homepage.this);
 
             if (result.getContents().equals("01")) {
-                builder.setTitle("This bill is for Table No ");
+                builder.setTitle("This bill is for Table No 1");
 
                 // builder.setTitle("Result");
                 builder.setPositiveButton("BTake me to Cafe menu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        Intent resultintent = new Intent(homepage.this, menu.class);
+                        Intent resultintent = new Intent(homepage.this, ruleshob.class);
                         resultintent.putExtra("result", result.getContents());
                         startActivity(resultintent);
                     }
@@ -104,7 +104,7 @@ public class homepage extends AppCompatActivity {
                 builder.setPositiveButton("Take me to Cafe menu", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent resultintent = new Intent(homepage.this, menu.class);
+                        Intent resultintent = new Intent(homepage.this, ruleshob.class);
                         resultintent.putExtra("result", result.getContents());
                         startActivity(resultintent);
                     }
@@ -116,12 +116,12 @@ public class homepage extends AppCompatActivity {
                 builder.setPositiveButton("Invalid code Please try again", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(homepage.this, homepage.class);
+                        Intent intent = new Intent(homepage.this, Login.class);
                         startActivity(intent);
                     }
                 }).show();
-                //  Intent intent=new Intent(homepage.this,Login.class);
-                // startActivity(intent);
+                 // Intent intent=new Intent(homepage.this,Login.class);
+               // startActivity(intent);
             }
         }
     });

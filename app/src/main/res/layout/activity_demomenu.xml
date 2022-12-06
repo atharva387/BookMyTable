@@ -8,7 +8,7 @@
     tools:context=".hobspmenu">
 
     <ImageView
-        android:id="@+id/imm2"
+        android:id="@+id/demomenu"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:background="#132C14"

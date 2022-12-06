@@ -28,16 +28,9 @@ public class HobInfo extends AppCompatActivity
         tabItem1=(TabItem)findViewById(R.id.tab1);
         tabItem2=(TabItem)findViewById(R.id.tab2);
         tabItem3=(TabItem)findViewById(R.id.tab3);
-
-
-
-
         viewPager=(ViewPager)findViewById(R.id.vpager);
-
         pageAdapter=new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
-
-
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

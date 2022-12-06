@@ -62,10 +62,6 @@ public class menu extends AppCompatActivity {
                 b3.setText(Integer.toString(count));
             }
         });
-
-
-
-
     }
 
 }
